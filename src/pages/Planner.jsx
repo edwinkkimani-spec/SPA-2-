@@ -117,7 +117,7 @@ function Planner(){
 
                 async function handleSavedMeal(event){
                     event.preventDefault()
-
+                  await removedMeals(id);
                     if(!selectedRecipe){
                         setError("Kinldy select recipe first")
                         return
@@ -146,7 +146,7 @@ function Planner(){
                         })
                         if(!response.ok)throw new Error("Failed to save meal")
 
-                        
+                            await fetchMeals()
                             setShowForm(false)
                             setSelectedRecipe(null)
                             setRecipes([])
