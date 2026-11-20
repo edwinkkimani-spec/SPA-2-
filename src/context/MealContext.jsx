@@ -26,7 +26,7 @@ export function MealsProvider({children  }){
          fetchMeal();
     },[])
        
-    async function mealAdd(meal){
+    async function mealsAdded(meal){
         try{
           const response=await fetch(API_URL,{
             method:"POST",
@@ -47,7 +47,7 @@ export function MealsProvider({children  }){
            console.error("An error occured",error)
         }
     }
-      async function removeMeal(id){
+      async function removedMeals(id){
         try{
            const response=await fetch(`${API_URL}/${id}`,{
             method:"DELETE",
@@ -57,12 +57,18 @@ export function MealsProvider({children  }){
            }
            setMeals((previousMeals)=>
               previousMeals.filter((meal)=>meal.id !==id)
-                
+
          )
 
         }catch(error){
       console.error("Failed to delete meal",error)
         }
       }
+
+      return(
+        <MealContext.Provider value={{meals,mealsAdded,removedMeals}}>
+
+        </MealContext.Provider>
+      )
 }
 
