@@ -7,7 +7,7 @@ import "./styles/meal.css";
 
 import { UserProvider } from "./context/UserContext.jsx";
 import { FavoritesProvider } from "./context/FavoritesContext.jsx";
-import { MealProvider } from "./context/MealContext.jsx";
+import { MealProvided } from "./context/MealContext.jsx";
 import App from "./App.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,9 +15,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <UserProvider>
         <FavoritesProvider>
-            <MealProvider>
+            <MealProvided>
                 <App />
-            </MealProvider>
+            </MealProvided>
           
         </FavoritesProvider>
       </UserProvider>
