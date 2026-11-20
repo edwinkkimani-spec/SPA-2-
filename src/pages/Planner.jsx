@@ -16,7 +16,7 @@ function Planner(){
     const[search,setSearch]=useState("")
           const[recipes,setRecipes]=useState([])
              const[selectedRecipe,setSelectedRecipe]=useState(null)
-             const { meals, mealsAdded, removedMeals } = useMeals();
+             const { meals, mealsAdded, removedMeals,updateMeal} = useMeals();
               const [loading,setLoading]=useState(false)
               const[saving,setSaving]=useState(false)
               const[error,setError]=useState("")

@@ -77,20 +77,21 @@ export function MealProvider({children  }){
     if(!response.ok){
         throw new Error("Failed to update meal")
     }
-    const updateMeal=await response.json();
+    const updatedMealData=await response.json();
                {/*converts js object into json */}
      setMeals((previousMeals) =>
             previousMeals.map((meal) =>
                 meal.id === id ? updatedMeal : meal
             )
         );
-        return updateMeal
+        return updatedMealData
         }catch(error){
         console.error("Kindly try again later",error)
-        }
+    throw error    
+    }
       }
       return(
-        <Context.Provider value={{meals,mealsAdded,removedMeals}}>
+        <Context.Provider value={{ meals,mealsAdded,removedMeals,updatedMeal }}>
             {children}
         </Context.Provider>
       )
