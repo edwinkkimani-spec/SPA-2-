@@ -40,10 +40,12 @@ export function MealsProvider({childer  }){
             throw new Error("fail to save meal")
           }
           const MealsSaved=await response.json();
+             setMeals((previousMeals)=>[...previousMeals,MealsSaved])
 
         }catch(error){
-
+           console.error("An error occured",error)
         }
     }
+      async functio  
 }
 
