@@ -119,6 +119,8 @@ function Planner(){
                    setEditingMeal(meal)
                   setSelectedRecipe(meal);
                   setMealType(meal.mealType)
+                   setTime(meal.time);
+                     setSelectedDate(new Date(`${meal.date}T12:00:00`));
                 }
 
                 async function handleSavedMeal(event){
