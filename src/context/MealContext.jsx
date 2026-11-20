@@ -36,6 +36,9 @@ export function MealsProvider({childer  }){
             },
             body:JSON.stringyfy(meal),
           })
+          if(!response.ok){
+            throw new Error("fail to save meal")
+          }
         }catch(error){
 
         }
