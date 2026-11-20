@@ -5,7 +5,7 @@ const Context= createContext();
 
 const API_URL="http://localhost:3002/mealPlans"
 
-export function MealsProvider({childer  }){
+export function MealsProvider({children  }){
     const [meals,setMeals]=useState([]);
 
     useEffect(()=>{
@@ -34,7 +34,8 @@ export function MealsProvider({childer  }){
                 "Content-Type":"application/json",
 
             },
-            body:JSON.stringyfy(meal),
+         
+	     body: JSON.stringify(meal),
           })
           if(!response.ok){
             throw new Error("fail to save meal")
@@ -46,6 +47,22 @@ export function MealsProvider({childer  }){
            console.error("An error occured",error)
         }
     }
-      async functio  
+      async function removeMeal(id){
+        try{
+           const response=await fetch(`${API_URL}/${id}`,{
+            method:"DELETE",
+           })
+           if(!response.ok){
+            throw new Error("Failed to delete meal")
+           }
+           setMeals((previousMeals)=>
+              previousMeals.filter((meal)=>meal.id !==id)
+                
+         )
+
+        }catch(error){
+      console.error("Failed to delete meal",error)
+        }
+      }
 }
 
