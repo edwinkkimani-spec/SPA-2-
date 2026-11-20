@@ -118,7 +118,7 @@ function Planner(){
                 function handleEditMeal(meal){
                    setEditingMeal(meal)
                   setSelectedRecipe(meal);
-                  
+                  setMealType(meal.mealType)
                 }
 
                 async function handleSavedMeal(event){
