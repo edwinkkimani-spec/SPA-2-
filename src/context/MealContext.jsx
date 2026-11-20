@@ -66,9 +66,9 @@ export function MealsProvider({children  }){
       }
 
       return(
-        <MealContext.Provider value={{meals,mealsAdded,removedMeals}}>
+        <Context.Provider value={{meals,mealsAdded,removedMeals}}>
             {children}
-        </MealContext.Provider>
+        </Context.Provider>
       )
 }
 
