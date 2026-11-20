@@ -128,7 +128,7 @@ function Planner(){
 
                 async function handleSavedMeal(event){
                     event.preventDefault()
-                  await removedMeals(id);
+                 
                     if(!selectedRecipe){
                         setError("Kinldy select recipe first")
                         return
@@ -148,23 +148,19 @@ function Planner(){
                         setError("")
                      
                         if(editingMeal){
-                            awi
+                            await updateMeal(editingMeal.id,dataForMeal)
+                        }else{
+                                   await mealsAdded(dataForMeal)
                         }
-                        const response =await fetch(API_URL,{
-                            method:"POST",
-                            headers:{
-                                "Content-Type":"application/json",
-                            },
-                            body:JSON.stringify(dataForMeal)
 
-                        })
-                        if(!response.ok)throw new Error("Failed to save meal")
+                        
 
-                            await fetchMeals()
+                            
                             setShowForm(false)
                             setSelectedRecipe(null)
                             setRecipes([])
                             setSearch("")
+                            setEditingMeal(null)
                     } catch(error){
                    console.error("Sorry error occured:",error)
                    setError("Meal could not be saved,try again")

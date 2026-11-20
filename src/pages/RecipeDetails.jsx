@@ -39,7 +39,7 @@ function Details(){
 
     return(
         <main className="dashboard">
-            <h1>{recipe.strMealThumb}</h1>
+            <h1>{recipe.strMeal}</h1>
             <img src={recipe.strMealThumb} alt={recipe.strMeal} width="300"></img>
      <p>Category:{recipe.strCategory}</p>
      <p>Area:{recipe.strArea}</p>

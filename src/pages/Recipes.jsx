@@ -127,7 +127,7 @@ return(
                         <img src={recipe.strMealThumb} alt={recipe.strMeal}></img>
                         <button 
                         type="button" 
-                        className="favourite-btn"
+                        className="favorite-btn"
                          onClick={()=>isFavourite
                             ?removeFavorite(recipe.idMeal)
                             :addFavorite(recipe)

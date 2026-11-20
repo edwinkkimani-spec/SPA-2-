@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import { useFavorites } from "../context/FavoritesContext.jsx";
 import { useMeals } from "../context/MealContext.jsx";
-
+import { getRecipes } from "../services/mealApi.js";
 
 import {
   CalendarDays,
