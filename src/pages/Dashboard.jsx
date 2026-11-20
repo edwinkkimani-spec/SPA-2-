@@ -46,15 +46,6 @@ function Dashboard() {
 
     const [recipes] = useState([
 
-    {
-      id: 3,
-      name: "Pasta Primavera",
-      category: "Dinner",
-      time: "30 min",
-      rating: "4.7",
-      image:
-        "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600",
-    },
   ]);
 
 
