@@ -84,6 +84,7 @@ export function MealProvider({children  }){
                 meal.id === id ? updatedMeal : meal
             )
         );
+        return updateMeal
         }catch(error){
         console.error("Kindly try again later",error)
         }
