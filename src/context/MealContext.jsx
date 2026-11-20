@@ -39,6 +39,8 @@ export function MealsProvider({childer  }){
           if(!response.ok){
             throw new Error("fail to save meal")
           }
+          const MealsSaved=await response.json();
+
         }catch(error){
 
         }
