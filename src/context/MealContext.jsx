@@ -20,9 +20,14 @@ export function MealsProvider({childer  }){
               const data=await response.json()
               setMeals(data)
             }catch(error){
-              
+              console.error("Error occured meals",error)
             }
          }
-    })
+         fetchMeal();
+    },[])
+       
+    async function mealAdd(meal){
+        
+    }
 }
 
