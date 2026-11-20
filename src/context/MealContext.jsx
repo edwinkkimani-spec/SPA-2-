@@ -9,8 +9,19 @@ export function MealsProvider({childer  }){
     const [meals,setMeals]=useState([]);
 
     useEffect(()=>{
-         async function fetchMeals(){
-            
+         async function fetchMeal(){
+            try{
+              const response=await fetch(API_URL)
+
+              if(!response.ok){
+                throw new Error("Failed to load meals")
+
+              }
+              const data=await response.json()
+              setMeals(data)
+            }catch(error){
+              
+            }
          }
     })
 }
