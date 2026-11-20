@@ -101,6 +101,7 @@ function Planner(){
                 }
 
                 function DisplayForm(type){
+                    setEditingMeal(null)
                     setMealType(type)
                     setTime(
                         type==="Breakfast"
@@ -146,6 +147,9 @@ function Planner(){
                         setSaving(true)
                         setError("")
                      
+                        if(editingMeal){
+                            awi
+                        }
                         const response =await fetch(API_URL,{
                             method:"POST",
                             headers:{
@@ -308,6 +312,10 @@ function Planner(){
                           {meal.time}
                         </p>
                       </div>
+                      <button 
+                      type="button"
+                      onClick={()=>handleEditMeal}
+                      >Edit</button>
 
                       <button
                         type="button"
