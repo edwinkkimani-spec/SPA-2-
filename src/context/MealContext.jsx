@@ -66,8 +66,19 @@ export function MealProvider({children  }){
       }
       async function updatedMeal(id,updatedData){
         try{
-              const response=await fe
-               method:"PATCH"
+              const response=await fetch(`${API_URL}/${id}`,{
+                  method:"PATCH",
+                  headers:{
+                    "Content-Type":"application/json",
+                  },
+                  body:JSON.stringify(updatedData),
+              }
+        )
+    if(!response.ok){
+        throw new Error("Failed to update meal")
+    }
+    const updateMeal=await response.json();
+               
         }catch(error){
         console.error("Kindly try again later",error)
         }
