@@ -1,0 +1,16 @@
+{
+  "users": [],
+  "favorites": [],
+  "mealPlans": [
+    {
+      "date": "2026-11-20",
+      "mealType": "Breakfast",
+      "idMeal": "53095",
+      "strMeal": "Syrian Rice with Meat",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/zg2b9l1760524940.jpg",
+      "time": "08:00",
+      "id": 1
+    }
+  ],
+  "shoppingLists": []
+}
