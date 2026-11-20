@@ -78,7 +78,7 @@ export function MealProvider({children  }){
         throw new Error("Failed to update meal")
     }
     const updateMeal=await response.json();
-               
+               {/*converts js object into json */}
      setMeals((previousMeals) =>
             previousMeals.map((meal) =>
                 meal.id === id ? updatedMeal : meal
