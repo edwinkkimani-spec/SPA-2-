@@ -14,8 +14,7 @@ return(
 
        
 
-            {/*display the search icon */}
-            <search size={19}/>
+            
 
            <input type="text" placeholder="Search meals, recipes"></input>
         </div>
