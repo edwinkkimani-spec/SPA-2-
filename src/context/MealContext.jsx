@@ -64,7 +64,14 @@ export function MealProvider({children  }){
       console.error("Failed to delete meal",error)
         }
       }
-
+      async function updatedMeal(id,updatedData){
+        try{
+              const response=await fe
+               method:"PATCH"
+        }catch(error){
+        console.error("Kindly try again later",error)
+        }
+      }
       return(
         <Context.Provider value={{meals,mealsAdded,removedMeals}}>
             {children}
