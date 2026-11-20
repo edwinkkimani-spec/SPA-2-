@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useFavorites } from "../context/FavoritesContext.jsx";
 
 
@@ -46,13 +46,7 @@ function Dashboard() {
 
     const [recipes] = useState([
     {
-      id: 1,
-      name: "Avocado Toast",
-      category: "Breakfast",
-      time: "15 min",
-      rating: "4.8",
-      image:
-        "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600",
+     
     },
     {
       id: 2,
