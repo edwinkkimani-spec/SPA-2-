@@ -19,6 +19,7 @@ function Planner(){
              const { meals, mealsAdded, removedMeals,updateMeal} = useMeals();
               const [loading,setLoading]=useState(false)
               const[saving,setSaving]=useState(false)
+              const [editingMeal, setEditingMeal] = useState(null);
               const[error,setError]=useState("")
 
             function DateKey(date){
@@ -113,6 +114,9 @@ function Planner(){
                     setSelectedRecipe(null)
                     setError("")
                     setShowForm(true)
+                }
+                function handleEditMeal(meal){
+                   setEditingMeal(meal)
                 }
 
                 async function handleSavedMeal(event){
