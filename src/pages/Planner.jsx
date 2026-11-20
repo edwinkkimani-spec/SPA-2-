@@ -121,6 +121,8 @@ function Planner(){
                   setMealType(meal.mealType)
                    setTime(meal.time);
                      setSelectedDate(new Date(`${meal.date}T12:00:00`));
+                     setShowForm(true)
+                     setError("")
                 }
 
                 async function handleSavedMeal(event){
