@@ -79,6 +79,11 @@ export function MealProvider({children  }){
     }
     const updateMeal=await response.json();
                
+     setMeals((previousMeals) =>
+            previousMeals.map((meal) =>
+                meal.id === id ? updatedMeal : meal
+            )
+        );
         }catch(error){
         console.error("Kindly try again later",error)
         }
