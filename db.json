@@ -10,6 +10,33 @@
       "strMealThumb": "https://www.themealdb.com/images/media/meals/zg2b9l1760524940.jpg",
       "time": "08:00",
       "id": 1
+    },
+    {
+      "date": "2026-11-20",
+      "mealType": "Breakfast",
+      "idMeal": "53095",
+      "strMeal": "Syrian Rice with Meat",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/zg2b9l1760524940.jpg",
+      "time": "08:00",
+      "id": 2
+    },
+    {
+      "date": "2026-11-20",
+      "mealType": "Lunch",
+      "idMeal": "52962",
+      "strMeal": "Salmon Eggs Eggs Benedict",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/1550440197.jpg",
+      "time": "13:00",
+      "id": 3
+    },
+    {
+      "date": "2026-11-20",
+      "mealType": "Dinner",
+      "idMeal": "52777",
+      "strMeal": "Mediterranean Pasta Salad",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/wvqpwt1468339226.jpg",
+      "time": "19:00",
+      "id": 4
     }
   ],
   "shoppingLists": []

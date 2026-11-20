@@ -5,7 +5,7 @@ const Context= createContext();
 
 const API_URL="http://localhost:3002/mealPlans"
 
-export function MealsProvided({children  }){
+export function MealProvider({children  }){
     const [meals,setMeals]=useState([]);
 
     useEffect(()=>{

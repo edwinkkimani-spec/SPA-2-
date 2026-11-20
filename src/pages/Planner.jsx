@@ -2,7 +2,7 @@ import {useEffect,useState} from "react"
 import {CalendarDays, ChevronLeft, ChevronRight, Plus, X, Trash2, Clock, Utensils}from "lucide-react"
 
 import { getRecipes } from "../services/mealApi.js";
-
+import { useMeals } from "../context/MealContext.jsx";
 const API_URL = "http://localhost:3002/mealPlans";
 
 function Planner(){
@@ -16,7 +16,7 @@ function Planner(){
     const[search,setSearch]=useState("")
           const[recipes,setRecipes]=useState([])
              const[selectedRecipe,setSelectedRecipe]=useState(null)
-              const[meals,setMeals]=useState([])
+             const { meals, mealsAdded, removedMeals } = useMeals();
               const [loading,setLoading]=useState(false)
               const[saving,setSaving]=useState(false)
               const[error,setError]=useState("")
@@ -63,9 +63,7 @@ function Planner(){
                    setLoading(false)
                 }
             }
-                useEffect(()=>{
-                    fetchMeals();
-                },[])
+                
 
                 function changeTheWeek(amount){
                  const newDate=new Date(selectedDate)
