@@ -7,5 +7,11 @@ const API_URL="http://localhost:3002/mealPlans"
 
 export function MealsProvider({childer  }){
     const [meals,setMeals]=useState([]);
+
+    useEffect(()=>{
+         async function fetchMeals(){
+            
+         }
+    })
 }
 
