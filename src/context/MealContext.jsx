@@ -27,7 +27,11 @@ export function MealsProvider({childer  }){
     },[])
        
     async function mealAdd(meal){
-        
+        try{
+
+        }catch(error){
+
+        }
     }
 }
 
