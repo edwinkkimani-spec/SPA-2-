@@ -45,18 +45,7 @@ function Dashboard() {
     const {favorites}=useFavorites()
 
     const [recipes] = useState([
-    {
-     
-    },
-    {
-      id: 2,
-      name: "Chicken Salad",
-      category: "Lunch",
-      time: "25 min",
-      rating: "4.9",
-      image:
-        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600",
-    },
+
     {
       id: 3,
       name: "Pasta Primavera",
