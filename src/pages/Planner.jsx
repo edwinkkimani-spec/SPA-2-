@@ -161,25 +161,9 @@ function Planner(){
                 }
 
                 async function handleDeleteMeal(id){
-                    try{
-                        const response=await fetch(`${API_URL}/${id}`,{
-                            method:"DELETE",
-                        })
-
-                        if(!response.ok){
-                            throw new Error("Failed to delete meal.")
-                    }
-                        setMeals((previousMeals)=>
-                             previousMeals.filter((meal)=>meal.id !==id)
-
-                        )
-
-                    }catch(error){
-
-                    console.error("Error occured deleting meals",error)
-                    setError("Deleting meal was not posible")
+                   await removedMeals(id);
+                
                 }
-            }
            const selectedDays=meals
            .filter((meal)=>meal.date ===DateKey(selectedDate))
            .sort((a,b)=>a.time.localeCompare(b.time))
